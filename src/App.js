@@ -11,6 +11,10 @@ function App() {
   const params = useParams();
   const productId = params?.id;
 
+  const NotFound = () => {
+    return <h2>404 - Sayfa Bulunamadı</h2>;
+  };
+
   return (
     <div className="flex flex-col bg-[#F9F9F9] h-full w-full ">
       <Header setSearchValue={setSearchValue} />
@@ -18,7 +22,8 @@ function App() {
         <div className="2xl:col-span-8 col-span-10">
           <Routes>
             <Route path="/" element={<HomePage searchValue={searchValue} />} />
-            <Route path="/:id" element={<ProductDetails productId={productId} />} />
+            <Route path="/productDetails/:id" element={<ProductDetails productId={productId} />} />
+             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
         <div className="2xl:col-span-2 hidden 2xl:flex">

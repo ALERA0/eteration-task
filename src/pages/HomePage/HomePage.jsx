@@ -203,7 +203,8 @@ const HomePage = ({ searchValue }) => {
         )}
         <Pagination
           defaultCurrent={1}
-          total={sortedAndPaginatedItems?.length}
+          total={sortedAndPaginatedItems?.length - 4}
+          showSizeChanger={false} 
           onChange={(page) => setCurrentPage(page)}
           className="w-full flex justify-center items-center mx-auto col-span-4 pb-8 pt-4"
         />

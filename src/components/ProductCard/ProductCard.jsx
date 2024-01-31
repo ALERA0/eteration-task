@@ -15,7 +15,7 @@ const ProductCard = ({ product }) => {
 
   const handleClick = () => {
     // 'Add to Cart' butonuna tıklanırsa navigate yap
-    navigate(`/${product.id}`);
+    navigate(`/productDetails/${product.id}`);
   };
 
   return (

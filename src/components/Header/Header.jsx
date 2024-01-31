@@ -1,5 +1,5 @@
 // Header.jsx
-import { InboxOutlined, QrcodeOutlined, UserOutlined } from "@ant-design/icons";
+import { InboxOutlined, QrcodeOutlined, ShoppingOutlined, UserOutlined } from "@ant-design/icons";
 import Search from "antd/es/input/Search";
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
@@ -39,7 +39,7 @@ const Header = ({ setSearchValue }) => {
           className="flex 2xl:hidden text-white text-xl my-auto gap-1 cursor-pointer hover:text-blue-950 duration-200"
           onClick={toggleBasketVisibility}
         >
-          <QrcodeOutlined />
+        <ShoppingOutlined />
           <p className="lg:flex hidden">Basket</p>
         </div>
       </div>
