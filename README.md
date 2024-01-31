@@ -13,9 +13,11 @@ This project is a task created for the Eteration company. It is built using Reac
 
 
 
-## Available Scripts
+## Start the Project
+
 
 In the project directory, you can run:
+
 
 ### `npm start`
 
@@ -26,10 +28,15 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
+## Test the Project
+
 ### `npm run cypress`
 
 To test the project, first run the `npm run cypress` command. Then click on the component testing option in the cypress panel that follows. After initialization, you can choose the browser you want on the screen that appears. You can run the test by selecting the element you want from the list of tested elements in the opened browser.
 See the section about [running tests](https://docs.cypress.io/guides/overview/why-cypress#Running-tests) for more information.
+
+
+## Build the Project
 
 ### `npm run build`
 
