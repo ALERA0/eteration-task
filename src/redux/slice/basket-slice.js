@@ -1,11 +1,16 @@
 // basketSlice.js
 import { createSlice } from '@reduxjs/toolkit';
 
+const getBasketFromLocalStorage = () => {
+  const localStorageBasket = localStorage.getItem('basket');
+  return localStorageBasket ? JSON.parse(localStorageBasket) : [];
+};
+
 export const basketSlice = createSlice({
   name: 'basket',
   initialState: {
-    items: [],
-    totalPrice:0,
+    items: getBasketFromLocalStorage(),
+    totalPrice: 0,
   },
   reducers: {
     addToBasket: (state, action) => {
@@ -51,6 +56,6 @@ export const basketSlice = createSlice({
   },
 });
 
-export const { addToBasket, removeFromBasket, resetBasket,calculateTotalPrice } = basketSlice.actions;
+export const { addToBasket, removeFromBasket, resetBasket, calculateTotalPrice } = basketSlice.actions;
 
 export default basketSlice.reducer;
